@@ -50,6 +50,12 @@ function Section({children, title}: SectionProps): React.JSX.Element {
         ]}>
         {children}
       </Text>
+      <View style={{ flex: 1 }}>
+          <Text style={{  mixBlendMode: 'overlay'  }}>This is blended</Text>
+          <ScrollView>
+            <Text style={{  mixBlendMode: 'overlay'  }}>This wont be blended</Text>
+          </ScrollView>
+      </View>
     </View>
   );
 }
